@@ -31,8 +31,8 @@ void print_python_list(PyObject *p)
 }
 
 /**
- * print_python_bytes - Prints information about a Python list object
- * @p: pointer to Python list object
+ * print_python_bytes - Prints information about a Python bytes object
+ * @p: pointer to Python bytes object
  *
  * Return: nothing
 */
@@ -51,7 +51,7 @@ void print_python_bytes(PyObject *p)
 	}
 
 	/* Get the size of the bytes object */
-	size = PyBytes_Size(p);
+	size = PyObject_Size(p);
 	/* Get the string representation of the bytes object */
 	str = PyBytes_AsString(p);
 
