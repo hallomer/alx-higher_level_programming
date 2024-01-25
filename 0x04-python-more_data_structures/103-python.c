@@ -1,19 +1,13 @@
 #include <Python.h>
 #include <stdio.h>
 
-/**
- * print_python_list - Prints information about a Python list object
- * @p: pointer to Python list object
- *
- * Return: nothing
-*/
 void print_python_list(PyObject *p)
 {
 	Py_ssize_t size, i;
 	PyObject *item;
 
 	/* Get the size of the Python list */
-	size = PyList_Size(p);
+	size = PyObject_Length(p);
 
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %ld\n", size);
@@ -26,16 +20,10 @@ void print_python_list(PyObject *p)
 		item = PyList_GetItem(p, i);
 		printf("Element %ld: ", i);
 		/* Print the type name of the item */
-		printf("%s\n", Py_TYPE(item)->tp_name);
+		printf("%s\n", item->ob_type->tp_name);
 	}
 }
 
-/**
- * print_python_bytes - Prints information about a Python bytes object
- * @p: pointer to Python bytes object
- *
- * Return: nothing
-*/
 void print_python_bytes(PyObject *p)
 {
 	Py_ssize_t size, i;
@@ -51,7 +39,7 @@ void print_python_bytes(PyObject *p)
 	}
 
 	/* Get the size of the bytes object */
-	size = PyObject_Size(p);
+	size = ((PyVarObject *)p)->ob_size;
 	/* Get the string representation of the bytes object */
 	str = PyBytes_AsString(p);
 
@@ -61,7 +49,7 @@ void print_python_bytes(PyObject *p)
 	printf("  first 10 bytes: ");
 	/* Print the first 10 bytes of the bytes object */
 	for (i = 0; i < size && i < 10; i++)
-		printf("%02x ", (unsigned char)str[i]);
+		printf("%02hhx ", str[i]);
 
 	printf("\n");
 }
