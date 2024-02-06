@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
-class Square:
-    """
+"""
     Represents a square shape with a size.
 
     Attributes:
@@ -13,10 +11,12 @@ class Square:
     Raises:
         TypeError: If size is not an integer.
         ValueError: If size is less than 0.
-    """
+"""
 
-    def __init__(self, size=0):
-        """
+
+class Square:
+
+    """
         Initializes a new instance of the Square class.
 
         Args:
@@ -25,7 +25,8 @@ class Square:
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
-        """
+    """
+    def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
