@@ -28,8 +28,8 @@ class Square:
             size (int): The size of the square. Defaults to 0.
             position (tuple): The position of the square. Defaults to (0, 0).
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -60,14 +60,14 @@ class Square:
 
     def area(self):
         """Calculates and returns the area of the square."""
-        return self.__size ** 2
+        return self.size ** 2
 
     def my_print(self):
         """Prints a visual representation of the square."""
-        if self.__size == 0:
+        if self.size == 0:
             print()
         else:
-            for _ in range(self.__position[1]):
+            for _ in range(self.position[1]):
                 print()
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+            for _ in range(self.size):
+                print(" " * self.position[0] + "#" * self.size)
