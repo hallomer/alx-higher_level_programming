@@ -1,6 +1,29 @@
 #!/usr/bin/python3
+
 class Square:
+    """
+    Represents a square shape.
+
+    Attributes:
+        __size (float): The size of the square.
+
+    Methods:
+        __init__(size=0): Initializes a new instance of the Square class.
+        size(): Getter method for the size attribute.
+        size(value): Setter method for the size attribute.
+        area(): Calculates and returns the area of the square.
+        __lt__(other): Less than comparison operator overload.
+        __le__(other): Less than or equal to comparison operator overload.
+        __eq__(other): Equality comparison operator overload.
+        __ne__(other): Not equal to comparison operator overload.
+        __gt__(other): Greater than comparison operator overload.
+        __ge__(other): Greater than or equal to comparison operator overload.
+    """
+
     def __init__(self, size=0):
+        """
+        Initializes a new instance of the Square class.
+        """
         self.__size = size
 
     @property
