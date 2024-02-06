@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-''' Empty class'''
+"""
+    The Square class represents a square shape.
+"""
 
 
 class Square:
-    '''
-    The Square class represents a square shape.
-
-    This class doesn't have any attributes or methods defined yet.
-    It serves as a placeholder for future functionality related to squares.
-    '''
+    """This class doesn't have any attributes or methods defined yet.
+    It serves as a placeholder for future functionality related to squares."""
     pass

@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
+"""Represents a square shape with a size and position."""
+
+
 class Square:
     """
-    Represents a square shape with a size and position.
-
     Attributes:
         __size (int): The size of the square.
         __position (tuple): The position of the square.

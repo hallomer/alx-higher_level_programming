@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
+"""Represents a node in a singly linked list."""
+
+
 class Node:
     """
-    Represents a node in a singly linked list.
-
     Attributes:
         _data: The data stored in the node.
         _next_node: The reference to the next node.
@@ -55,10 +56,11 @@ class Node:
         self._next_node = value
 
 
+"""Represents a singly linked list."""
+
+
 class SinglyLinkedList:
     """
-    Represents a singly linked list.
-
     Attributes:
         head: The head node of the linked list.
 
