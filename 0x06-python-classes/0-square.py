@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' Empty class'''
 
+
 class Square:
     '''
     The Square class represents a square shape.

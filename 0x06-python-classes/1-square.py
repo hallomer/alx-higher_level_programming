@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
-class Square:
-    '''
+'''
     Represents a square shape with a size.
 
     Attributes:
@@ -9,13 +7,16 @@ class Square:
 
     Methods:
         __init__(size): Initializes a new instance of the Square class.
-    '''
+'''
 
-    def __init__(self, size):
-        '''
+
+class Square:
+
+    '''
         Initializes a new instance of the Square class.
 
         Args:
             size (int): The size of the square.
-        '''
+    '''
+    def __init__(self, size):
         self.__size = size
