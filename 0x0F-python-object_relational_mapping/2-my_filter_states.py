@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-takes in an argument and displays all values in the states table of
-hbtn_0e_0_usa db where name matches the argument.
-"""
+"""Displays all states matches the user's argument."""
 import MySQLdb
 from sys import argv
 
