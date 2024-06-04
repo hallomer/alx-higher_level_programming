@@ -12,7 +12,8 @@ request(url, (error, response, body) => {
 
   const film = JSON.parse(body);
   const characters = film.characters;
-  const characterNames = [];
+  const characterNames = new Array(characters.length);
+  let count = 0;
 
   characters.forEach((characterUrl, index) => {
     request(characterUrl, (error, response, body) => {
@@ -23,12 +24,11 @@ request(url, (error, response, body) => {
 
       const character = JSON.parse(body);
       characterNames[index] = character.name;
+      count++;
 
-      if (characterNames.length === characters.length) {
+      if (count === characters.length) {
         characterNames.forEach(name => {
-          if (name) {
-            console.log(name);
-          }
+          console.log(name);
         });
       }
     });
