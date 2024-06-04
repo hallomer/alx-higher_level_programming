@@ -7,7 +7,7 @@ request(url, (error, response, body) => {
     console.log(error);
   } else {
     const films = JSON.parse(body).results;
-    const wedgeCount = films.filter(film => film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')).length;
+    const wedgeCount = films.filter(film => film.characters.includes('/18/')).length;
     console.log(wedgeCount);
   }
 });
